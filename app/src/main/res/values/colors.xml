@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="almost_black">#191919</color>
+    <color name="red">#F00</color>
+    <color name="separateur">#d6d6d6</color>
+    <color name="grey2">#f9f9f9</color>
+    <color name="grey3">#f7f7f7</color>
+
+    <color name="searchBar">#202323</color>
+
+    <color name="app_bg">#e8e8e8</color>
+
+    <color name="deck_bg">#dddddd</color>
+    <color name="notification_bg">#eaeaea</color> <!-- e5e5e5-->
+
+    <!-- 242727-->
+
+    <color name="nav_line">#1c1f1f</color>
+    <color name="follow_line">#c8c8c8</color>
+
+    <color name="colorProfil_BG">#2e3232</color>
+    <color name="colorProfil_BG_TAB">#2a2d2d</color>
+    <color name="colorProfil_Text">#cccccc</color>
+    <color name="colorProfil_Text2">#b2b2b2</color>
+    <color name="colorProfil_Tabs_Off">#7c7c7c</color>
+
+    <color name="tag_tx_selected">#7fa1b4</color>
+
+
+    <color name="colorCardsIndicator">#abc1ce</color>
+
+
+    <!-- TAG Selector Color -->
+    <color name="tag_tx_selector01">#03ffd0</color> <!-- violet -->
+    <color name="tag_tx_selector02">#fbecd0</color> <!-- jaune -->
+    <color name="tag_tx_selector03">#b9daf0</color> <!-- orange -->
+    <color name="tag_tx_selector04">#e49cbd</color> <!-- bleu -->
+    <color name="tag_tx_selector05">#ae8d81</color>
+
+    <color name="tag_bg_selector01">#00a989</color> <!-- vert -->
+    <color name="tag_bg_selector02">#f1aa26</color> <!-- jaune -->
+    <color name="tag_bg_selector03">#3595d7</color> <!-- bleu -->
+    <color name="tag_bg_selector04">#b53f76</color> <!-- mauve -->
+    <color name="tag_bg_selector05">#785447</color>
+
+
+    <!-- TAG indicator -->
+    <color name="tag_orange">#d88b12</color>
+    <color name="tag_on">#11699c</color>
+
+    <color name="colorPrimary">#242727</color>
+    <color name="colorPrimaryDark">#121414</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#00436a</color>
+
+    <color name="tag_count">#d7dee3</color>
+    <color name="tag_count_text">#6f6f6f</color>
+
+    <color name="pass_indicator">#2f2f2f</color>
+
+    <!-- TAGS 8d8d8d-->
+
+    <color name="btn_form_bg_off">#bfbfbf</color>
+    <color name="btn_form_text_off">#999999</color>
+
+    <color name="btn_off">#070b0c</color>
+
+    <color name="tag_layout_bg">#f5f5f4</color>
+
+    <color name="tag_bg_off">#e7edf0</color>
+    <color name="tag_tx_off">#7193a8</color>
+    <color name="tag_tx_off2">#7193a8</color>
+
+    <color name="tag_tx_FORUM">#269542</color>
+
+    <color name="notif_row_bg_open">#ebebeb</color>
+    <color name="notif_row_bg_new_comment">#d8e2e9</color>
+    <color name="notif_row_bg_new_upvote">#ebe4ce</color>
+
+    <!-- EDITOR -->
+    <color name="editor_btn_next">#262626</color>
+    <color name="editor_bottom_menu">#2f2f2f</color>
+    <color name="editor_bottom_text">#7c7c7c</color>
+    <color name="editor_bottom_text_black">#000</color>
+    <color name="curated">#267aab</color>
+
+</resources>

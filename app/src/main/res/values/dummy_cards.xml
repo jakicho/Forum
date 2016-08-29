@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="author_name">
+        <item>Steve Jobs</item>
+        <item>Rainer Maria Rilke</item>
+        <item>Carl Gustav Jung</item>
+        <item>Henry David Thoreau</item>
+        <item>Albert Einstein</item>
+        <item>Henry David Thoreau</item>
+    </string-array>
+
+
+    <string-array name="string_pict">
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-5e552b32-bd15-40f6-a84a-d9bf8a24d1c2-profil_photo.png</item>
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-426a3946-44f4-4fd2-a01e-85b8d9508086-profil_photo.png</item>
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-58a67e37-e296-44e5-b565-5ac7c50e2771-profil_photo.png</item>
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-3efbe461-b3b8-4085-ad70-eb93e23291ce-profil_photo.png</item>
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-1bb12536-6448-4868-b6bd-b9d5d5624279-profil_photo.png</item>
+        <item>http://files.parsetfss.com/75bd47df-ba6f-411a-9524-ddbdb3c6f6bb/tfss-3efbe461-b3b8-4085-ad70-eb93e23291ce-profil_photo.png</item>
+    </string-array>
+
+
+    <string-array name="tag_line">
+        <item>Entrepreneur</item>
+        <item>Author, Poet</item>
+        <item>Psychanalyst</item>
+        <item>Author, Philosopher</item>
+        <item>Physicist</item>
+        <item>Author, Philosopher</item>
+    </string-array>
+
+
+    <string-array name="main_content">
+        <item>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. As with all matters of the heart, you\'ll know when you find it.</item>
+        <item>Do not assume that he who seeks to comfort you now, lives untroubled among the simple and quiet words that sometimes do you good. His life may also have much sadness and difficulty, that remains far beyond yours. Were it otherwise, he would never have been able to find these words.</item>
+        <item>There are as many nights as days, and the one is just as long as the other in the year\'s course. Even a happy life cannot be without a measure of darkness, and the word \'happy\' would lose its meaning if it were not balanced by sadness.</item>
+        <item>I find it wholesome to be alone the greater part of the time. To be in company, even with the best, is soon wearisome and dissipating. I love to be alone. I never found the companion that was so companionable as solitude.</item>
+        <item>If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.</item>
+        <item>You must live in the present, launch yourself on every wave, find your eternity in each moment. Fools stand on their island of opportunities and look toward another land. There is no other land; there is no other life but this.</item>
+    </string-array>
+
+    <string-array name="tags">
+        <item>work life love purpose relationship perseverance belief</item>
+        <item>relationship life adversity sadness difficulty support mentor</item>
+        <item>life happiness darkness balance sadness meaning</item>
+        <item>loneliness solitude companion wholesome</item>
+        <item>children kids fairy_tales intelligence tales</item>
+        <item>now present life instant reality</item>
+    </string-array>
+
+
+    <integer-array name="nb_upvotes">
+        <item>10</item>
+        <item>15</item>
+        <item>15</item>
+        <item>15</item>
+        <item>20</item>
+        <item>20</item>
+    </integer-array>
+
+    <integer-array name="nb_replies">
+        <item>7</item>
+        <item>10</item>
+        <item>4</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+
+
+
+
+
+
+    <string-array name="time">
+        <item>6:54PM - 29 JAN 2015</item>
+        <item>6:54PM - 29 JAN 2015</item>
+        <item>6:54PM - 29 JAN 2015</item>
+        <item>6:54PM - 29 JAN 2015</item>
+        <item>6:54PM - 29 JAN 2015</item>
+        <item>6:54PM - 29 JAN 2015</item>
+    </string-array>
+
+    <string-array name="localisation">
+        <item> Paris</item>
+        <item> London</item>
+        <item> London</item>
+        <item> Paris</item>
+        <item> London</item>
+        <item> London</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">FORUM</string>
+    <string name="app_name_min">Forum</string>
+    <string name="app_version">1.1.73</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="et_search_tag">Select or search a tag</string>
+    <string name="et_hint_share_something">Share something</string>
+    <string name="et_hint_tags2">Enter 1 to 7 tags</string>
+    <string name="et_hint_tags">Enter 1 to 7 tags (required)</string>
+    <string name="et_hint_tags_optional">Enter 1 to 7 tags (optional)</string>
+    <string name="et_short_hint_tags">add additional tag</string>
+
+    <string name="have_an_account">Have an account?</string>
+
+    <string name="topics">topics:</string>
+    <string name="loading">loading…</string>
+    <string name="loading_slow">…a bit slow right now (I know ^^)</string>
+    <string name="loading_notifications">loading your notifications</string>
+    <string name="loading_prev_notifications">loading previous notifications</string>
+    <string name="loading_notifications_explanation">You\'ll receive notifications when people upvote or comment your cards</string>
+
+    <string name="write_comment">Write a comment</string>
+    <string name="reply_to2">Reply to …</string>
+    <string name="add_tags">Add Tags</string>
+    <string name="post">POST</string>
+    <string name="preview">Preview</string>
+
+
+    <string name="write_a_short_presentation">Write a short presentation</string>
+    <string name="optional_link">optional link</string>
+    <string name="edit_your_bio">Edit your bio</string>
+    <string name="edit_your_name">Edit your name</string>
+    <string name="swipe_to_send">Swipe up to send your card</string>
+
+    <string name="all_cards">all cards</string>
+    <string name="show">show</string>
+
+
+    <string name="select_feed">SELECT A FEED</string>
+
+    <string name="select_relevant_first_tag">Select a relevant first tag</string>
+
+
+
+
+    <string name="cards_chronological_order">Cards in a chronological order</string>
+    <string name="click_to_add">Click on (+) to set a feed on a topic you like</string>
+    <string name="subscription_deleted">subscription deleted</string>
+
+    <string name="comment_of">comment of </string>
+    <string name="be_the_first_to_comment">Be the first to comment</string>
+    <string name="show_comments">show comments</string>
+    <string name="show_all_comments">Show all comments</string>
+
+    <string name="title_of_story">Title of the story</string>
+
+
+    <string name="no_card_yet">no card yet</string>
+    <string name="no_comment_yet">no comment yet</string>
+    <string name="no_conversation_yet">No conversation yet</string>
+    <string name="no_story_yet">No story yet</string>
+
+    <string name="no_card_from_you">You haven\'t posted any card yet</string>
+    <string name="no_comment_from_you">You haven\'t comment any\ncard yet</string>
+    <string name="no_conversation_from_you">You haven\'t started any conversation yet</string>
+
+    <string name="no_story_from_you">To write a story, simply reply to one of your post</string>
+
+
+
+    <string name="password">Password</string>
+    <string name="new_password">New password</string>
+    <string name="repeat_password">Repeat password</string>
+
+    <string name="first_name">First name</string>
+    <string name="surname">Family name</string>
+
+
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="send_recovery_email">Send Recovery Email</string>
+
+    <string name="global_feed">Global Feed</string>
+    <string name="replies">replies</string>
+    <string name="no_more_card">no more card</string>
+
+
+    <string name="dialog_logout">Do you want to logout ?</string>
+    <string name="dialog_logout_yes">Yes</string>
+    <string name="dialog_logout_no">No</string>
+
+
+
+    <string name="message_wrong_login">wrong login/password</string>
+    <string name="message_reset_password">We have sent you an email with reset instructions</string>
+    <string name="message_reset_retry">Please retry</string>
+
+    <string name="message_no_card">No cards to show yet :-)</string>
+    <string name="message_no_card2">No cards to show yet. Be the first to publish a card on this topic :-)</string>
+    <string name="message_picture_error">Cannot handle your picture</string>
+
+    <string name="message_card_sent">Card was sent!</string>
+    <string name="message_card_not_sent">Card was not sent</string>
+
+    <string name="message_upvoted">upvoted</string>
+    <string name="message_already_upvoted">already upvoted</string>
+    <string name="message_upvoted_deleted">upvote erased</string>
+    <string name="message_no_upvoted">upvote has not been taken into account </string>
+
+    <string name="message_tag_subscribed_to">subscribe to tags: </string>
+    <string name="message_tag_already_subscribed">already subscribed</string>
+
+    <string name="message_comment_posted">Comment was posted!</string>
+    <string name="message_comment_posted_in_thread">Your comment was posted in your thread</string>
+
+
+    <string name="most_used_tags">MOST USED TAGS</string>
+    <string name="related_tags">RELATED TAGS</string>
+
+    <string name="reply_to">Reply to %s</string>
+    <string name="write_reply_to">Write a reply to </string>
+    getResources().getString(R.string.tag_already_selected)
+
+    <string name="select_tags_to_follow">Select tags to follow</string>
+
+    <string name="tag_already_selected">tag is already selected</string>
+    <string name="continue_writing">Continue writing…</string>
+
+
+    <string name="not_valid_link">not a valid link</string>
+    <string name="nb_upvotes_received">number of upvotes received</string>
+    <string name="nb_replies_received">number of replies received</string>
+
+    <string name="no_self_upvote">You cannot upvote your own card :-)</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+
+    <string name="upload_profil_pict">Upload your profile picture with:</string>
+    <string name="change_profil_pict">Change your profile picture</string>
+    <string name="crop_image">Crop Image</string>
+    <string name="no_crop_image">no crop image possible</string>
+    <string name="image_uploading">uploading…</string>
+
+
+
+    <string name="title_activity_card">CardActivity</string>
+    <string name="title_activity_log">Log Activity</string>
+    <string name="title_activity_crop">Crop Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profil">ProfilActivity</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+</resources>

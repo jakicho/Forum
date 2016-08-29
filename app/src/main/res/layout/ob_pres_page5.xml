@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <!--android:src="@drawable/tuto_05" -->
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/top_title_final"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/white"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="In the Forum, we are all\nconnected to each other"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <FrameLayout
+        android:layout_below="@+id/top_title_final"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/gradient_blue2"/>
+
+
+    <FrameLayout
+        android:layout_above="@+id/bottom_tile"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/gradient_blue3"/>
+
+    <TextView
+        android:id="@+id/bottom_tile"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="30dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Everybody has an equal\nchance to be heard."
+        android:background="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient_blue"/>
+
+
+</RelativeLayout>

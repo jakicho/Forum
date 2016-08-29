@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorProfil_BG"
+    android:id="@+id/frag_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainSections.NavigationFeed">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/colorProfil_BG"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/nav_title"
+            android:background="@drawable/button_sl_bottom_menu"
+            android:gravity="center|start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:text="@string/select_feed"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:alpha="0.3"
+            android:textColor="@color/white" />
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:id="@+id/btn_add_subscription_global"
+            android:background="@drawable/button_sl_bottom_menu"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:alpha="1"
+                android:src="@drawable/ic_plus_white_48dp"/>
+
+        </co.forum.app.tools.SquareRelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="1"
+        android:background="@color/nav_line" />
+
+    <co.forum.app.tools.NonSwipeableViewPager
+        android:id="@+id/drawerViewPager"
+        android:layout_weight="0.9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/drawerTabLayout"
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="1dp"
+        app:tabMinWidth="90dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/colorProfil_Tabs_Off" />
+
+</LinearLayout>

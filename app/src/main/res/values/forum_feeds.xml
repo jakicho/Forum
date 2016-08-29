@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="default_feeds">
+        <item>intuition</item>
+        <item>happiness</item>
+        <item>life motivation</item>
+        <item>tech</item>
+        <item>advice</item>
+        <item>joke</item>
+        <item>relationship</item>
+        <item>games</item>
+        <item>question</item>
+        <item>tvshows</item>
+        <item>movies</item>
+        <item>music</item>
+    </string-array>
+
+    <string-array name="forum_feeds_tags">
+        <item>FORUM</item>
+        <item>FORUM how_it_works</item>
+        <item>FORUM request</item>
+        <item>FORUM bug</item>
+        <item>FORUM update</item>
+    </string-array>
+
+    <string-array name="forum_feeds_description">
+        <item>All cards about the app</item>
+        <item>How Forum works (Jak Tran only)</item>
+        <item>All suggested feature requests</item>
+        <item>Bugs and crashes that people have reported</item>
+        <item>Updates (Jak Tran only)</item>
+    </string-array>
+
+</resources>

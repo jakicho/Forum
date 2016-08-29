@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.forum.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:protectionLevel="signature"
+        android:name="com.parse.starter.permission.C2D_MESSAGE" />
+    <uses-permission android:name="co.forum.app.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".ForumApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="LRhmNOm6z1D28C0jvqp4Ku1PSdu55ddtvr0Qrrl8" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="dU157u0JuN6Op7vcez6UR9NkGTExUaYyYoCVe670" />
+
+
+        <activity
+            android:name="co.forum.app.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="co.forum.app.SubActivity.SubActivity"
+            android:label="@string/title_activity_card"
+            android:parentActivityName="co.forum.app.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.forum.app.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="co.forum.app.OnBoardingActivity.OnBoardingActivity"
+            android:label="@string/title_activity_log"
+            android:screenOrientation="portrait"
+            android:parentActivityName="co.forum.app.MainActivity"
+            android:hardwareAccelerated="false"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.forum.app.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="co.forum.app.CropActivity"
+            android:label="@string/title_activity_crop"
+            android:screenOrientation="portrait"
+            android:parentActivityName="co.forum.app.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.forum.app.MainActivity" />
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <!--
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver
+            android:name="co.forum.app.Receiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="co.forum.app" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/push_icon"/>
+    </application>
+
+</manifest>

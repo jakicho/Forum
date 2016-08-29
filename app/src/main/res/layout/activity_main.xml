@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:fitsSystemWindows="true"
+    android:id="@+id/main_coordinator"
+    tools:context="co.forum.app.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/new_content_panel_structure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                sothree:umanoPanelHeight="0dp"
+                sothree:umanoParalaxOffset="50dp"
+                sothree:umanoShadowHeight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.AppBarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/AppTheme.AppBarOverlay">
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/colorPrimary"
+                            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+                    </android.support.design.widget.AppBarLayout>
+
+                    <!-- body -->
+                    <RelativeLayout
+                        android:id="@+id/activity_content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!-- a simplifier -->
+                        <FrameLayout
+                            android:id="@+id/activity_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <co.forum.app.tools.NonSwipeableViewPager
+                                    android:id="@+id/viewPager"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+                        <!-- app:tabMaxWidth="170dp"
+                            app:tabMinWidth="90dp"
+                             android:layout_gravity="bottom"-->
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorPrimary"
+                            app:tabMaxWidth="100dp"
+                            app:tabMinWidth="90dp"
+                            app:tabMode="fixed" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- sliding panel -->
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/panel_editor_container_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+
+            </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_fab_pen" />
+
+        </FrameLayout>
+
+        <fragment
+            android:id="@+id/frag_navigation_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:name="co.forum.app.MainSections.NavigationSelector"
+            tools:layout="@layout/panel_navigation" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

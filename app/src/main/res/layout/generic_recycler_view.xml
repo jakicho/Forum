@@ -1,0 +1,493 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshNotificationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/generic_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <!--top loader-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/notification_loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="left|top"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_notifications"/>
+
+    </LinearLayout>
+
+    <!-- bottom loader -->
+    <LinearLayout
+        android:layout_alignBottom="@+id/refreshNotificationRecycler"
+        android:visibility="gone"
+        android:id="@+id/notification_bottom_loader"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="left|top"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_prev_notifications"/>
+
+    </LinearLayout>
+
+    <!-- empty notification -->
+    <LinearLayout
+        android:id="@+id/empty_notif_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="12dp"
+                android:alpha="0.3"
+                android:src="@drawable/ic_profil_blank" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:text="@string/loading_notifications_explanation"
+                    android:textSize="17sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:alpha="0.1"
+            android:background="#000" />
+
+    </LinearLayout>
+
+    <!-- empty post -->
+    <LinearLayout
+        android:id="@+id/empty_post_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:alpha="0.3"
+            android:background="@drawable/empty_card_indicator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.7"
+                    android:src="@drawable/ic_pen_indicator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/no_card_from_you"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </co.forum.app.tools.SquareRelativeLayout>
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- empty commentaire -->
+    <LinearLayout
+        android:id="@+id/empty_comment_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:alpha="0.3"
+            android:background="@drawable/empty_card_indicator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.7"
+                    android:src="@drawable/ic_comment_black_indicator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/no_comment_from_you"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </co.forum.app.tools.SquareRelativeLayout>
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- empty user post -->
+    <LinearLayout
+        android:id="@+id/empty_user_post_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:alpha="0.3"
+            android:background="@drawable/empty_card_indicator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.7"
+                    android:src="@drawable/ic_pen_indicator"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/no_card_yet"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </co.forum.app.tools.SquareRelativeLayout>
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- empty user commentaire -->
+    <LinearLayout
+        android:id="@+id/empty_user_comment_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:alpha="0.3"
+            android:background="@drawable/empty_card_indicator">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:alpha="0.7"
+                    android:src="@drawable/ic_comment_black_indicator"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/no_comment_yet"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </co.forum.app.tools.SquareRelativeLayout>
+
+        <co.forum.app.tools.SquareRelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!-- empty chat -->
+    <LinearLayout
+        android:id="@+id/empty_chat_indicator"
+        android:alpha="0.3"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:background="@drawable/empty_chat_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:alpha="0.7"
+                android:src="@drawable/ic_conversation_black2"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/no_conversation_from_you"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- empty user chat -->
+    <LinearLayout
+        android:id="@+id/empty_user_chat_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:alpha="0.3"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:background="@drawable/empty_chat_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:alpha="0.7"
+                android:src="@drawable/ic_conversation_black2"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/no_conversation_yet"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- empty story -->
+    <LinearLayout
+        android:id="@+id/empty_story_indicator"
+        android:alpha="0.3"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_margin="0dp"
+            android:background="@drawable/empty_card_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:alpha="0.7"
+                android:src="@drawable/ic_script_black_48dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:lineSpacingExtra="6sp"
+                android:text="@string/no_story_from_you"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- empty user story -->
+    <LinearLayout
+        android:id="@+id/empty_user_story_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:alpha="0.3"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_margin="0dp"
+            android:background="@drawable/empty_card_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:alpha="0.7"
+                android:src="@drawable/ic_script_black_48dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/no_story_yet"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.forum.app.SubActivity.ChatFrag">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/chat_content_panel_structure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="0dp"
+        sothree:umanoParalaxOffset="50dp"
+        sothree:umanoShadowHeight="2dp">
+
+        <!-- CARTE EN PARALLAX + LISTE DE COMMENTAIRES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+
+                <!-- android:background="@drawable/button_sl_profil" -->
+                <LinearLayout
+                    android:id="@+id/btn_profil_1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_sl_bottom_menu2"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingStart="12dp"
+                    android:paddingRight="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/profil_pic_1"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/profil_pict" />
+
+                    <TextView
+                        android:id="@+id/tv_starter_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/btn_profil_2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_sl_bottom_menu2"
+                    android:gravity="center|end"
+                    android:orientation="horizontal"
+                    android:paddingEnd="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_replier_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/profil_pic_2"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/profil_pict" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_chat_message"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <LinearLayout
+                android:id="@+id/bottom_contribute"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="30dp">
+                <TextView
+                    android:text="Click on a card to post a comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:textSize="13sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- sliding panel -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/panel_editor_container_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--
+            <include layout="@layout/panel_editor_reply"/>
+            -->
+
+        </LinearLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</FrameLayout>

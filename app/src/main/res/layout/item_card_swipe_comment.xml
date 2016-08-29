@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardToSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@color/black"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="1dp">
+
+        <!--
+        card_view:cardUseCompatPadding="true"-->
+
+
+        <LinearLayout
+            android:id="@+id/forShadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!-- android:background="@drawable/bg_card_comment" -->
+
+            <co.forum.app.tools.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/elementRootView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="350dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/reply_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginRight="6dp"
+                                android:alpha="0.2"
+                                android:src="@drawable/ic_reply2" />
+
+                            <TextView
+                                android:id="@+id/tv_parent_author"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.4"
+                                android:textColor="@color/colorAccent"
+                                android:text="Jak Tran"
+                                android:textStyle="bold|italic" />
+                            <FrameLayout
+                                android:visibility="invisible"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="6dp"
+                                android:alpha="0.7"
+                                android:background="@color/separateur" />
+
+                        </LinearLayout>
+
+                        <!-- header -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingBottom="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/cardSwipe_header"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/button_sl_card_header"
+                                android:paddingLeft="16dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingRight="16dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profil_pic"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:foregroundGravity="center"
+                                    android:src="@drawable/profil_pict" />
+
+                                <LinearLayout
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_username"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="0dp"
+                                        android:lineSpacingExtra="2dp"
+                                        android:text="Jak Tran"
+                                        android:textColor="@color/colorAccent"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tv_timestamp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="0dp"
+                                            android:lines="1"
+                                            android:text="9 hours ago"
+                                            android:textColor="#B7BABA"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                        <LinearLayout
+                                            android:id="@+id/row_gps"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <FrameLayout
+                                                android:layout_width="2dp"
+                                                android:layout_height="2dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_marginRight="3dp"
+                                                android:layout_marginTop="1dp"
+                                                android:background="@drawable/dot" />
+
+                                            <ImageView
+                                                android:layout_width="14dp"
+                                                android:layout_height="14dp"
+                                                android:layout_gravity="bottom"
+                                                android:layout_marginRight="1dp"
+                                                android:alpha="0.2"
+                                                android:paddingBottom="1dp"
+                                                android:src="@drawable/ic_map_marker_black_48dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_localisation"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:lines="1"
+                                                android:text="Paris"
+                                                android:textColor="#B7BABA"
+                                                android:textSize="12sp"
+                                                android:textStyle="normal" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/tv_tagline"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="0dp"
+                                            android:lines="1"
+                                            android:text="Author and poet"
+                                            android:alpha="0.5"
+                                            android:textSize="13sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btn_copy_content"
+                                android:background="@drawable/button_sl_card_header"
+                                android:gravity="center"
+                                android:layout_marginStart="-7dp"
+                                android:layout_marginLeft="-7dp"
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/copy_icon"
+                                    android:layout_marginLeft="23dp"
+                                    android:layout_marginRight="23dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.5"
+                                    android:src="@drawable/ic_content_48dp"/>
+
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/btn_notif"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignRight="@+id/cardSwipe_header"
+                                android:layout_marginRight="2dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:alpha="0.5"
+                                    android:src="@drawable/ic_bookmark_border" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- IMAGE -->
+                            <ImageView
+                                android:visibility="visible"
+                                android:id="@+id/image"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <!-- MAIN TEXT -->
+                                <LinearLayout
+                                    android:id="@+id/content_text"
+                                    android:visibility="visible"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center|left"
+                                    android:orientation="vertical">
+
+                                    <!-- content -->
+                                    <TextView
+                                        android:id="@+id/tv_main_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:alpha="0.7"
+                                        android:ellipsize="end"
+                                        android:lineSpacingExtra="2sp"
+                                        android:paddingLeft="16dp"
+                                        android:paddingRight="16dp"
+                                        android:text="La chèvre est un animal d'assez petite taille, à cornes arquées ou sans cornes (motte), très agile, particulièrement adapté au saut. Sa température interne normale est assez élevée (de 38 à 39,5 °C). On la trouve dans toutes les régions du globe, particulièrement en montagne. Les mâles"
+                                        android:textColor="@color/black"
+                                        android:textSize="19sp" />
+                                    <LinearLayout
+                                        android:id="@+id/btn_link"
+                                        android:visibility="visible"
+                                        android:orientation="horizontal"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/button_sl_card_header"
+                                        android:paddingBottom="2dp"
+                                        android:paddingTop="2dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingEnd="5dp"
+                                        android:paddingLeft="5dp"
+                                        android:paddingStart="5dp"
+                                        android:gravity="center|left"
+                                        android:minWidth="200dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginLeft="7dp"
+                                        android:layout_marginStart="7dp"
+                                        android:layout_marginRight="12dp"
+                                        android:layout_marginEnd="12dp">
+
+                                        <ImageView
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:alpha="0.4"
+                                            android:src="@drawable/ic_link_variant_grey600_48dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_link"
+                                            android:layout_marginStart="3dp"
+                                            android:layout_marginLeft="3dp"
+                                            android:textColor="#B7BABA"
+                                            android:text="http://www.jakleouf.com"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+
+                                <!-- Vote Up / Replies -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp">
+
+                                    <!-- UPVOTE -->
+                                    <LinearLayout
+                                        android:id="@+id/btn_upvote"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/tv_nb_upvotes"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:alpha="0.5"
+                                            android:text="10"
+                                            android:textStyle="bold" />
+
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginBottom="-2dp"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_marginTop="2dp"
+                                            android:alpha="0.2"
+                                            android:src="@drawable/ic_thumb_up_black" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp">
+
+                                        <TextView
+                                            android:id="@+id/tv_nb_replies"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="1dp"
+                                            android:alpha="0.5"
+                                            android:text="24"
+                                            android:textStyle="bold" />
+
+                                        <!-- reply text-->
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginBottom="-2dp"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_marginTop="2dp"
+                                            android:alpha="0.2"
+                                            android:src="@drawable/ic_comment_black" />
+                                    </LinearLayout>
+
+                                    <!-- LEGEND TEXT -->
+                                    <LinearLayout
+                                        android:id="@+id/content_legend"
+                                        android:layout_marginTop="-2dp"
+                                        android:visibility="visible"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="top|left"
+                                        android:orientation="vertical">
+
+                                        <!-- content -->
+                                        <TextView
+                                            android:id="@+id/tv_legend_content"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="italic"
+                                            android:alpha="0.7"
+                                            android:maxLines="1"
+                                            android:ellipsize="end"
+                                            android:lineSpacingExtra="2sp"
+                                            android:paddingLeft="16dp"
+                                            android:paddingRight="12dp"
+                                            android:text="La chèvre est un animal d'assez petite taille, à cornes arquées"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp" />
+                                        <LinearLayout
+                                            android:id="@+id/btn_link2"
+                                            android:visibility="gone"
+                                            android:orientation="horizontal"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/button_sl_card_header"
+                                            android:paddingBottom="2dp"
+                                            android:paddingTop="2dp"
+                                            android:paddingRight="5dp"
+                                            android:paddingEnd="5dp"
+                                            android:paddingLeft="5dp"
+                                            android:paddingStart="5dp"
+                                            android:gravity="center|left"
+                                            android:minWidth="200dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_marginLeft="7dp"
+                                            android:layout_marginStart="7dp"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_marginEnd="12dp">
+
+                                            <ImageView
+                                                android:layout_width="17dp"
+                                                android:layout_height="17dp"
+                                                android:alpha="0.4"
+                                                android:src="@drawable/ic_link_variant_grey600_48dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_link2"
+                                                android:layout_marginStart="3dp"
+                                                android:layout_marginLeft="3dp"
+                                                android:textColor="#B7BABA"
+                                                android:text="http://www.jakleouf.com"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!-- UPVOTE -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/indicator_upvote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:alpha="0"
+                            android:text="UPVOTE"
+                            android:textColor="#d88b12"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- PASS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/indicator_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="100dp"
+                            android:alpha="0"
+                            android:text="PASS"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- SEND -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/indicator_send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0"
+                            android:text="SEND"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- UPVOTE BORDER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:id="@+id/border_upvote"
+                            android:layout_width="280dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="100dp"
+                            android:alpha="0"
+                            android:background="@drawable/confirmation_upvote_border"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                    <!-- PASS BORDER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:id="@+id/border_pass"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="100dp"
+                            android:alpha="0"
+                            android:background="@drawable/confirmation_pass_border"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+
+                    <!-- SEND BORDER -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <LinearLayout
+                            android:id="@+id/border_send"
+                            android:layout_width="220dp"
+                            android:layout_height="100dp"
+                            android:alpha="0"
+                            android:background="@drawable/confirmation_send_border"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </co.forum.app.tools.SquareRelativeLayout>
+
+            <!-- TAB FOOTER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- bordure -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separateur"
+                    android:visibility="visible" />
+
+                <!-- tag layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_tag_row_rounded"
+                    android:orientation="vertical">
+
+                    <!-- android:background="@color/tag_layout_bg" -->
+
+                    <!-- tags -->
+                    <co.forum.app.tools.HorizontalScrollView2
+                        android:id="@+id/tags_scroller"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:scrollbarSize="1dp">
+
+                        <co.forum.app.tools.RowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/header_tags_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:horizontalSpacing="6dp"
+                            android:padding="6dp"
+                            android:verticalSpacing="0dp">
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <co.forum.app.tools.TagView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <!--
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#mouse" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#cat" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#dog" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#animals" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#tiger" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#elephant" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#bird" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#chicken" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </android.support.v7.widget.CardView>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </android.support.v7.widget.CardView>
+
+                            -->
+
+                        </co.forum.app.tools.RowLayout>
+
+                    </co.forum.app.tools.HorizontalScrollView2>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

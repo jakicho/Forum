@@ -1,0 +1,63 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reply_content_panel_structure"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="0dp"
+    sothree:umanoParalaxOffset="50dp"
+    sothree:umanoShadowHeight="6dp">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/coordinator_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SubActivity.CardFrag">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/indicator_post_comment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:alpha="0.3"
+                android:background="@drawable/empty_card_indicator"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="Be the first to reply to this card"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:visibility="gone" />
+
+            <!-- CARTE EN PARALLAX + LISTE DE COMMENTAIRES -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_replies"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- sliding panel -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/panel_editor_container_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--
+        <include layout="@layout/panel_editor_reply"/>
+        -->
+
+    </LinearLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

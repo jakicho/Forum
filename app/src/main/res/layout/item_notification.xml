@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/notification_bg"
+    android:orientation="vertical">
+
+    <!-- notification -->
+    <LinearLayout
+        android:id="@+id/icone_upvote"
+        android:background="@drawable/button_sl_mini_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/btn_profil_icon"
+            android:background="@drawable/button_sl_mini_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profil_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/profil_pict" />
+
+            <ImageView
+                android:layout_marginEnd="-5dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginBottom="-8dp"
+                android:id="@+id/notif_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignEnd="@+id/profil_icon"
+                android:layout_alignRight="@+id/profil_icon"
+                android:layout_alignBottom="@+id/profil_icon"
+                android:src="@drawable/ic_notif_comment_new"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/notif_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="notification text "
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_last_timestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.5"
+                    android:text="1mo ago"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/row_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="2dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/dot" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="1dp"
+                        android:alpha="0.2"
+                        android:paddingBottom="1dp"
+                        android:src="@drawable/ic_map_marker_black_48dp" />
+
+                    <TextView
+                        android:id="@+id/tv_localisation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:lines="1"
+                        android:text="Paris"
+                        android:textColor="#B7BABA"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- separateur -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:alpha="0.2"
+        android:background="@color/black" />
+
+</LinearLayout>
+

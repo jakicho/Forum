@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<co.forum.app.tools.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/elementRootView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="1dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginLeft="1dp"
+
+    android:layout_marginRight="2dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="2dp"
+    android:background="@drawable/bg_mini_comment">
+
+    <Button
+        android:id="@+id/btn_mini_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/button_sl_mini_comment" />
+
+    <RelativeLayout
+        android:id="@+id/mini_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:id="@+id/text_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/reply_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:alpha="0.2"
+                    android:src="@drawable/ic_reply2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:text="to "
+                        android:textSize="10dp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_parent_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.4"
+                        android:text="Jak Tran"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold|italic" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:alpha="0.4"
+                        android:background="@color/separateur"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginTop="-5dp"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:lineSpacingExtra="2sp"
+                android:maxLines="6"
+                android:text="La chèvre est un animal d'assez petite taille, à cornes arquées ou sans cornes (motte), très agile, particulièrement adapté au saut. Sa température interne normale est assez élevée (de 38 à 39,5 °C). On la trouve dans toutes les régions du globe, particulièrement en montagne. Les mâles sont appelés boucs et les petits sont des chevreaux (parfois encore appelés cabris). Le mâle castré peut être appelé menon dans certaines régions. Les boucs dégagent une odeur puissante."
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- Vote Up / Replies -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left|bottom"
+                android:orientation="horizontal">
+
+                <!-- UPVOTE -->
+                <LinearLayout
+                    android:id="@+id/btn_upvote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_nb_upvotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.7"
+                        android:text="10"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/icone_thumb"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="4dp"
+                        android:alpha="0.2"
+                        android:src="@drawable/ic_thumb_up_black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_nb_replies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:alpha="0.7"
+                        android:text="24"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/icone_comment"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="-2dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="2dp"
+                        android:alpha="0.2"
+                        android:src="@drawable/ic_comment_black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/mini_card_loader"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:alpha="0.5"
+                        android:paddingTop="3dp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_notif"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/mini_card">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            android:src="@drawable/ic_bookmark_blue" />
+
+    </FrameLayout>
+
+
+</co.forum.app.tools.SquareRelativeLayout>

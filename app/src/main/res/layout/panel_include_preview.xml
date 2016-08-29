@@ -1,0 +1,74 @@
+<RelativeLayout
+    android:id="@+id/preview_card_include"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:orientation="horizontal"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/text_swipeUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="@string/swipe_to_send"
+        android:textAllCaps="true"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <!-- fake button -->
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_back_default"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.3"
+            android:layout_gravity="center|right"
+            android:src="@drawable/ic_undo_black" />
+
+    </LinearLayout>
+
+    <co.forum.app.cardStackView.CardStackView
+        android:id="@+id/card_stack_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <!-- back button -->
+    <LinearLayout
+        android:id="@+id/btn_back_to_editor"
+        android:layout_marginBottom="10dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_sl_back"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:alpha="0.3"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

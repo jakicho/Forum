@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/forum_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name_min"
+            android:textColor="@color/white"
+            android:textSize="52sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_alignEnd="@+id/forum_title"
+            android:layout_alignRight="@+id/forum_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:paddingTop="3dp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:text="beta"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Find great content and\nchat with the world\non topics you want"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient_blue" />
+
+</LinearLayout>

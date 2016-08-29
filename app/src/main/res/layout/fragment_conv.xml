@@ -1,0 +1,40 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header / profil + toolbar -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/chat_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/almost_black">
+
+        <!-- tab layout -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/chat_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorProfil_BG_TAB"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorProfil_Text"
+            app:tabIndicatorHeight="1dp"
+            app:tabMinWidth="90dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/colorProfil_Tabs_Off" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- ViewPager -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/chat_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</android.support.design.widget.CoordinatorLayout>

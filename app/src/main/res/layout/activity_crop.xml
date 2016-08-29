@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorProfil_BG"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loader"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:indeterminate="true" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            android:text="@string/image_uploading"/>
+    </LinearLayout>
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/cropImageView"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="5dp"
+        custom:cropMode="circle"
+        />
+
+    <!-- custom:cropMode="ratio_1_1"-->
+
+    <ImageView
+        android:id="@+id/croppedImageView"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <!-- btn_bg -->
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/crop_btns"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <!-- reset button -->
+        <LinearLayout
+            android:id="@+id/crop_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ic_reset"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_close_off_48dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="@string/crop_image"
+                android:textColor="@color/editor_bottom_text"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/almost_black" />
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/btn_validate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="Validate"
+                android:textAllCaps="false"
+                android:textColor="@color/editor_bottom_text"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/ic_result"
+                android:layout_gravity="center|left"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_chevron_right_off_48dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

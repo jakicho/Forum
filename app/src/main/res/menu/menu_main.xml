@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.forum.app.MainActivity">
+
+    <item
+        android:id="@+id/action_rankResult"
+        android:title="rank"
+        android:icon="@drawable/ic_rank_recent"
+        android:orderInCategory="100"
+        android:textColorHint="@android:color/white"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_search_button"
+        android:icon="@drawable/ic_search_bluegrey_36dp"
+        android:orderInCategory="200"
+        android:title="search"
+        android:textColorHint="@android:color/white"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_search_tag"
+        android:icon="@drawable/ic_search_white_36dp"
+        android:title="Search"
+        android:textColorHint="@android:color/white"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_story_button"
+        android:icon="@drawable/ic_pound_bluesky_36dp"
+        android:orderInCategory="200"
+        android:title="stories"
+        android:visible="false"
+        android:textColorHint="@android:color/white"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout"
+        app:showAsAction="never" />
+</menu>

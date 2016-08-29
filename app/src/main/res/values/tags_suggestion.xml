@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tags_suggestion01">
+
+        <item>RandomThought</item>
+        <item>Mood</item>
+        <item>Quote</item>
+        <item>Question</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion02">
+
+        <item>ComicStrip</item>
+        <item>FunnyPict</item>
+        <item>Tech</item>
+        <item>Photography</item>
+        <item>Art</item>
+        <item>Science</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion03">
+
+        <item>TVshows</item>
+        <item>VideoGames</item>
+        <item>Movies</item>
+        <item>Music</item>
+        <item>Sport</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion04">
+
+        <item>Philosophy</item>
+        <item>Politics</item>
+        <item>Society</item>
+        <item>Spirituality</item>
+        <item>Entrepreneurship</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion05">
+
+        <item>FORUM</item>
+        <item>FORUM-Feedback</item>
+        <item>FORUM-Request</item>
+        <item>FORUM-Bug</item>
+
+    </string-array>
+
+
+    <!-- FOR STORIES SELECTOR -->
+
+    <string-array name="tags_suggestion11">
+
+        <item>ALL-STORIES</item>
+        <item>FORUM</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion22">
+
+        <item>ComicStrip</item>
+        <item>Music</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion33">
+
+        <item>Art</item>
+        <item>Photography</item>
+        <item>Science</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion44">
+
+        <item>Question</item>
+        <item>Quote</item>
+
+    </string-array>
+
+    <string-array name="tags_suggestion55">
+
+        <item>Philosophy</item>
+        <item>Politics</item>
+
+    </string-array>
+
+
+</resources>

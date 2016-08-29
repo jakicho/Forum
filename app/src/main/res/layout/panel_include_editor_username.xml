@@ -1,0 +1,130 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/username_editor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorProfil_BG"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Edit your name"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/block_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/form_double_edit_text"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_update_first_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/form_edit_text_pwd"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/separateur" />
+
+            <EditText
+                android:id="@+id/et_update_family_surname"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/form_edit_text_pwd"
+                android:hint="@string/surname"
+                android:inputType="textPersonName|textNoSuggestions|textCapWords"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/edit_your_name"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_update_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_sl_activated"
+                android:text="  Update  "
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/gradient_black">
+
+        <TextView
+            android:id="@+id/forum_title_editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.2"
+            android:gravity="center"
+            android:paddingBottom="45dp"
+            android:paddingTop="30dp"
+            android:text="Forum"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_alignBottom="@+id/forum_title_editor"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

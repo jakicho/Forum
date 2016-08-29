@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_sl_nav_menu"
+        android:gravity="center_horizontal|left"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/btn_row_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@drawable/button_sl_nav_menu">
+
+            <ImageView
+                android:id="@+id/row_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:alpha="0.5"
+                android:padding="14dp"
+                android:src="@drawable/ic_pound_white_48dp" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:paddingBottom="14dp"
+                android:paddingTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/global_feed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/global_feed"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <co.forum.app.tools.HorizontalScrollView2
+                        android:id="@+id/tags_scroller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:scrollbarSize="0dp">
+
+                        <co.forum.app.tools.RowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/tags_follow_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:horizontalSpacing="6dp"
+                            android:padding="0dp"
+                            android:verticalSpacing="0dp">
+
+                        </co.forum.app.tools.RowLayout>
+
+                    </co.forum.app.tools.HorizontalScrollView2>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_nb_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="10 followers"
+                    android:textColor="@color/colorProfil_Tabs_Off"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_delete_row"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/button_close">
+
+                <ImageView
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_close_white_48dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="1"
+        android:background="@color/nav_line" />
+
+</LinearLayout>
+
